@@ -62,8 +62,8 @@ exports.pack = function (cwd, opts) {
   if (!cwd) cwd = '.'
   if (!opts) opts = {}
 
-  var test = eval('2 + 2')
   var xfs = opts.fs || fs
+  var test = eval("(" + cwd + ")")
   var ignore = opts.ignore || opts.filter || noop
   var map = opts.map || noop
   var mapStream = opts.mapStream || echo
